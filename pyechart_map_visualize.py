@@ -7,7 +7,8 @@ from pyecharts.globals import ThemeType
 import numpy as np
 
 
-df = pd.read_csv("baidu.csv", encoding='gbk')
+# df = pd.read_csv("baidu.csv", encoding='gbk')
+df = pd.read_csv('data_all.csv', encoding='utf-8')
 df = df.loc[(df.keyword == '财神') & (df['type'] == 'all'),
             ['province', 'keyword', 'year', 'mean']]
 print(df.head())
